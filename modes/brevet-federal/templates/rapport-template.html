@@ -1,0 +1,171 @@
+<!doctype html>
+<!--
+  Gabarit du rapport — Mode Brevet fédéral.
+  L'orchestrateur remplace chaque {{…}} et duplique les blocs marqués REPEAT.
+  Fichier local et confidentiel : ne pas publier.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapport Council Brevet</title>
+<style>
+  :root {
+    --bg: #fbfaf8; --surface: #ffffff; --text: #1d1d1f; --muted: #5f6368;
+    --border: #e3e1dc; --accent: #9b1c1c;
+    --crit: #b42318; --crit-bg: #fdecea;
+    --imp: #b54708; --imp-bg: #fef4e6;
+    --sec: #475467; --sec-bg: #f0f2f5;
+    --ok: #067647; --ok-bg: #e7f6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414; --surface: #1d1d1f; --text: #ececec; --muted: #a1a1a6;
+      --border: #333336; --accent: #f28b82;
+      --crit: #ff8a80; --crit-bg: #3a1d1b; --imp: #ffb366; --imp-bg: #3a2a17;
+      --sec: #b8c0cc; --sec-bg: #262a30; --ok: #6fd3a0; --ok-bg: #16301f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1.05rem; margin: 20px 0 8px; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin: 12px 0; }
+  .disclaimer { border-left: 4px solid var(--accent); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .kpi .v { font-size: 1.6rem; font-weight: 700; }
+  .kpi .l { color: var(--muted); font-size: .85rem; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; color: var(--muted); }
+  .tag { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: .78rem; font-weight: 600; white-space: nowrap; }
+  .critique { color: var(--crit); background: var(--crit-bg); }
+  .importante { color: var(--imp); background: var(--imp-bg); }
+  .secondaire { color: var(--sec); background: var(--sec-bg); }
+  .rempli { color: var(--ok); background: var(--ok-bg); }
+  .partiel { color: var(--imp); background: var(--imp-bg); }
+  .absent { color: var(--crit); background: var(--crit-bg); }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+  .filters button { border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    border-radius: 999px; padding: 4px 14px; cursor: pointer; font: inherit; font-size: .88rem; }
+  .filters button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .fiche dl { display: grid; grid-template-columns: minmax(120px, 190px) 1fr; gap: 6px 14px; margin: 0; }
+  .fiche dt { color: var(--muted); font-size: .88rem; }
+  .fiche dd { margin: 0; }
+  .exemple { background: var(--sec-bg); border-radius: 6px; padding: 8px 12px; white-space: pre-wrap; }
+  details { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin: 10px 0; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 600; }
+  details > div { padding: 0 16px 16px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; }
+  @media (max-width: 600px) { .fiche dl { grid-template-columns: 1fr; } }
+  @media print { .filters, details > summary::marker { display: none; } details { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Rapport du Council — Dossier de performance</h1>
+    <div class="meta">Brevet fédéral « Spécialiste en gestion de PME » · Version analysée : {{version}} · Session : {{date_session}}</div>
+  </header>
+
+  <div class="card disclaimer">
+    <strong>Document confidentiel, local.</strong> Les points ci-dessous sont une <strong>estimation indicative du Council — non officielle</strong>. Seuls les experts aux examens notent le dossier.
+    Étiquettes : <strong>[FAIT]</strong> vérifiable (avec page) · <strong>[HYPOTHÈSE]</strong> interprétation · <strong>[RECOMMANDATION]</strong> conseil du Council.
+    « Exigence officielle » = référence à l'A1 / aux directives ; tout le reste est une recommandation.
+  </div>
+
+  <h2>Verdict</h2>
+  <div class="card">{{verdict}}</div>
+  <div class="kpis">
+    <div class="card kpi"><div class="v">{{fourchette_basse}}–{{fourchette_haute}} / 30</div><div class="l">Fourchette indicative (seuil officiel de réussite : 18)</div></div>
+    <div class="card kpi"><div class="v">{{nb_critiques}}</div><div class="l">Modifications critiques</div></div>
+    <div class="card kpi"><div class="v">{{nb_importantes}}</div><div class="l">Modifications importantes</div></div>
+    <div class="card kpi"><div class="v">{{statut_formel}}</div><div class="l">Contrôle formel (éliminatoire)</div></div>
+  </div>
+
+  <h2>Contrôle formel</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Contrôle</th><th>Exigence officielle</th><th>Mesuré</th><th>Statut</th></tr></thead>
+    <tbody>
+      <!-- REPEAT -->
+      <tr><td>{{controle}}</td><td>{{exigence}}</td><td>{{mesure}}</td><td><span class="tag {{classe_statut}}">{{statut}}</span></td></tr>
+      <!-- /REPEAT -->
+    </tbody>
+  </table></div>
+
+  <h2>Évaluation critère par critère</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th>Critère (A1)</th><th>Max</th><th>Statut</th><th>Preuves</th><th>Ce qui manque</th><th>Fourchette</th></tr></thead>
+    <tbody>
+      <!-- REPEAT -->
+      <tr><td>{{id}}</td><td>{{critere}}</td><td>{{max}}</td><td><span class="tag {{classe}}">{{statut}}</span></td><td>{{pages}}</td><td>{{manque}}</td><td>{{min}}–{{max_est}}</td></tr>
+      <!-- /REPEAT -->
+    </tbody>
+  </table></div>
+
+  <h2>Synthèse du Chairman</h2>
+  <h3>Points forts</h3><div class="card">{{points_forts}}</div>
+  <h3>Points faibles</h3><div class="card">{{points_faibles}}</div>
+  <h3>Critères insuffisamment démontrés</h3><div class="card">{{criteres_insuffisants}}</div>
+  <h3>Incohérences</h3><div class="card">{{incoherences}}</div>
+  <h3>Risques d'échec</h3><div class="card">{{risques}}</div>
+  <h3>Améliorations prioritaires</h3><div class="card">{{top5}}</div>
+  <h3>Désaccords du Council</h3><div class="card">{{desaccords}}</div>
+
+  <h2>Modifications recommandées</h2>
+  <div class="filters" role="group" aria-label="Filtrer par priorité">
+    <button type="button" data-f="all" aria-pressed="true">Toutes</button>
+    <button type="button" data-f="critique" aria-pressed="false">Critiques</button>
+    <button type="button" data-f="importante" aria-pressed="false">Importantes</button>
+    <button type="button" data-f="secondaire" aria-pressed="false">Secondaires</button>
+  </div>
+  <!-- REPEAT -->
+  <article class="card fiche" data-p="{{priorite}}">
+    <h3>{{id_m}} — {{titre}} <span class="tag {{priorite}}">{{priorite}}</span></h3>
+    <dl>
+      <dt>1. Page et passage</dt><dd>{{page_passage}}</dd>
+      <dt>2. Problème</dt><dd>{{probleme}}</dd>
+      <dt>3. Importance</dt><dd>{{importance}}</dd>
+      <dt>4. Modification</dt><dd>{{modification}}</dd>
+      <dt>5. Exemple</dt><dd><div class="exemple">{{exemple}}</div></dd>
+      <dt>6. Priorité</dt><dd>{{priorite}}</dd>
+      <dt>7. Critère officiel</dt><dd>{{critere_officiel}}</dd>
+    </dl>
+  </article>
+  <!-- /REPEAT -->
+
+  <h2>Préparation à la soutenance</h2>
+  <div class="card">{{soutenance}}</div>
+
+  <h2>Détail des travaux du Council</h2>
+  <details><summary>A — Expert des exigences du brevet</summary><div>{{analyse_A}}</div></details>
+  <details><summary>B — Méthodologie, structure, rédaction</summary><div>{{analyse_B}}</div></details>
+  <details><summary>C — Expert du domaine professionnel</summary><div>{{analyse_C}}</div></details>
+  <details><summary>D — Examinateur critique</summary><div>{{analyse_D}}</div></details>
+  <details><summary>E — Coach stratégique</summary><div>{{analyse_E}}</div></details>
+  <details><summary>Relectures croisées anonymes (correspondance révélée)</summary><div>{{relectures}}</div></details>
+  <details><summary>Constats écartés à la vérification des preuves</summary><div>{{constats_ecartes}}</div></details>
+
+  <footer>
+    Sources officielles : {{sources_versions}} · Empreinte du mémoire analysé : {{sha256}} ·
+    Généré le {{date_session}} par le LLM Council, mode Brevet fédéral. Le mémoire original n'a pas été modifié.
+  </footer>
+</main>
+<script>
+  document.querySelectorAll('.filters button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-f');
+      document.querySelectorAll('.filters button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      document.querySelectorAll('.fiche').forEach(function (c) {
+        c.style.display = (f === 'all' || c.getAttribute('data-p') === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>

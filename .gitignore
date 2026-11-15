@@ -4,3 +4,6 @@ config.json
 node_modules/
 council-report-*.html
 council-transcript-*.md
+
+# Mode Brevet fédéral : espace de travail confidentiel (ne jamais versionner)
+brevet-council/

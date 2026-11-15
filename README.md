@@ -92,6 +92,25 @@ The council tells you things you don't want to hear. That's the feature, not a b
 
 ---
 
+## Second mode — Brevet fédéral suisse (FR)
+
+Un mode distinct pour évaluer et améliorer le **dossier de performance** de l'examen
+professionnel fédéral « Spécialiste en gestion de PME » (brevet fédéral — formation
+professionnelle supérieure, pas un brevet d'invention).
+
+- Déclencheurs : `council brevet`, `mode brevet`, `évalue mon dossier de performance`, `jury brevet`
+- Cinq conseillers dédiés (exigences du brevet, méthodologie, expert du domaine,
+  examinateur critique, coach stratégique) → relecture croisée anonyme → vérification des
+  citations → Chairman → fiches de modifications → préparation à la soutenance
+- Livrables : rapport HTML, transcript Markdown, liste des modifications, tableau de suivi CSV
+- Aucune analyse avant confirmation que les documents sont complets ; mémoire original
+  jamais modifié ; espace de travail exclu de git
+
+Documentation complète : [`modes/brevet-federal/MODE.md`](modes/brevet-federal/MODE.md).
+Le Council stratégique ci-dessus fonctionne exactement comme avant.
+
+---
+
 ## Credit
 
 - Methodology: [Andrej Karpathy's LLM Council](https://x.com/karpathy/status/1962263486196867115)

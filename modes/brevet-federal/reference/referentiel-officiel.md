@@ -83,6 +83,8 @@
 
 ### 4.2 Partie principale — 21 points (A1 p. 5–8)
 
+Pages exactes dans l'A1 : P-1 à P-5 → p. 5 ; P-6 à P-11 → p. 6 ; P-12 et P-13 → p. 7 ; champs F à K → p. 7–8.
+
 Les candidats démontrent qu'ils ont engrangé assez de connaissances pour pouvoir
 (via les champs d'action **B, C, D, F, H, I, J, K**) :
 

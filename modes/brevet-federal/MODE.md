@@ -259,8 +259,9 @@ et mise à jour du suivi (phase 9).
 Sous-agent « Jury » (`prompts.md` § 5), qui reçoit tout le dossier de session.
 Rappel officiel : présentation 20 min (10 pts), entretien 60 min (20 pts) ; « les
 compétences qui ne sont pas décrites dans le dossier de performance peuvent être
-examinées … lors de l'entretien » (A1 2.2). Sans A2/A3, le préciser en tête et ne citer
-**aucun** critère officiel d'oral.
+examinées … lors de l'entretien » (A1 2.2). Les critères officiels de l'oral sont PR-1…PR-6 (A2) et EN-1…EN-9
+(A3) du référentiel ; si A2/A3 ne sont pas dans `01_references-officielles/`, le préciser en tête
+et ne citer **aucun** critère officiel d'oral.
 
 Sortie `09_soutenance.md` :
 - 15–25 questions difficiles, classées par thème/critère, avec la raison de la question ;

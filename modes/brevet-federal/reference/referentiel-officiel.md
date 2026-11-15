@@ -16,13 +16,13 @@
 | **A1** | Annexe A1 — Guide pour le dossier de performance | CAQ 24.09.2014, modifié en dernier le 17.06.2024 |
 | **DIR** | Directives relatives au règlement d'examen « Spécialiste en gestion de PME » | CAQ 24.09.2014, modifié en dernier le 24.06.2022 |
 | **PRO** | Profils professionnels, contenu de la formation, grille des compétences | 01.01.2013, modifié le 17.03.2016 |
+| **A2** | Annexe A2 — Guide pour la présentation | CAQ 24.09.2014, modifié le 17.03.2016 |
+| **A3** | Annexe A3 — Guide pour l'entretien | CAQ 24.09.2014, modifié le 25.10.2019 |
 
 ### Documents officiels connus mais NON transcrits (à fournir)
 
 | Document | Pourquoi il compte | Conséquence s'il manque |
 |---|---|---|
-| Annexe **A2** — Guide pour la présentation (oral, 20 min, 10 pts) | Critères officiels de la présentation | Préparation à la soutenance = recommandations uniquement, aucun critère officiel cité |
-| Annexe **A3** — Guide pour l'entretien (oral, 60 min, 20 pts) | Critères officiels de l'entretien | Idem |
 | **Règlement d'examen** (approuvé par le SEFRI) | Texte juridique supérieur aux directives | Les directives sont utilisées seules |
 | Publication de la session d'examen | Les dates de la publication sont contraignantes (DIR p. 17) | Les délais cités restent ceux, indicatifs, de DIR 6.3 |
 
@@ -160,7 +160,57 @@ Total 30 (introduction 5 · partie principale 21 · conclusion 4).
 
 + Thématiques PME familiales, intégrées dans chaque module.
 
-## 7. Divergences de formulation repérées entre sources
+## 7. Épreuves orales (A2, A3)
+
+### 7.1 Présentation — 20 minutes, 10 points (A2)
+
+Contenu (A2 2.3, p. 2) : présenter les contenus élaborés dans le dossier **et de nouveaux
+aspects** qui n'ont pas encore été traités — ou pas de façon approfondie — dans le dossier ;
+présenter et analyser les arguments ayant motivé les décisions/mesures ; structure logique ;
+type de présentation adapté aux contenus et à la culture de l'entreprise.
+Infrastructure : communiquée avec la convocation ; tout dispositif supplémentaire est sous la
+responsabilité du candidat (A2 2.2).
+
+| ID | Critère (A2 3.1, p. 4) | Indicateurs | Pts |
+|---|---|---|---|
+| **PR-1** | Les contenus présentés constituent un bon résumé du travail | Contenus, type et mode de présentation montrent que c'est bien l'auteur du dossier qui expose ; congruence perceptible | 2 |
+| **PR-2** | Les contenus témoignent de l'expérience professionnelle (vocabulaire, compréhension des sources) | Aspects techniques, méthodologiques et liés à la personnalité ; langue et vocabulaire spécialisé ; références au dossier identifiables | 3 |
+| **PR-3** | Les contenus livrent de nouveaux aspects en lien avec le travail | Nouveaux aspects ou aspects approfondis ; lien avec le dossier perceptible | 2 |
+| **PR-4** | Structure logique, fil rouge | Introduction, partie principale, conclusion et développement logique identifiables | 1 |
+| **PR-5** | Type de présentation en phase avec l'environnement de l'entreprise | Type et technique adaptés, authentiques | 1 |
+| **PR-6** | Cadre temporel respecté | Mesure du temps ; ± 3 min tolérées ; à 23 min, le candidat est interrompu et doit conclure | 1 |
+
+Barème identique (0 / moitié / max). **Réussi : 6 à 10 points** (A2 3.2, p. 5).
+
+### 7.2 Entretien — 60 minutes, 20 points (A3)
+
+Exigences de contenu (A3 2.3, p. 2–3) : répondre de façon précise, correcte et compréhensible ;
+réponses détaillées sur l'analyse SWOT ; commenter forces/faiblesses et opportunités/risques ;
+expliquer des exemples d'actions et de résolutions de problèmes **tirés du dossier et des
+exemples supplémentaires tirés de l'entreprise**, reliant **au moins trois** compétences
+modulaires ; avoir des **solutions de rechange** ; s'interroger de façon critique sur les mises
+en application et sur son rôle personnel ; présenter les répercussions ; transposer à d'autres
+situations ou entreprises.
+
+Moyens auxiliaires (A3 2.5, p. 3) : le dossier, les documents de la présentation, et d'autres
+documents ayant un lien immédiat avec les explications (p. ex. tableau de calcul, bilan
+annuel, statistiques) ; pas d'ouvrages de référence.
+
+| ID | Critère (A3 3.1, p. 4–5) | Indicateurs | Pts |
+|---|---|---|---|
+| **EN-1** | Réponse précise | Se rapporte à la question posée | 1 |
+| **EN-2** | Réponse correcte techniquement | Pas de déclarations erronées | 1 |
+| **EN-3** | Réponse satisfaisante sur le contenu | Exhaustivité suffisante | 3 |
+| **EN-4** | Réponse compréhensible | A un sens pour les experts, semble logique | 3 |
+| **EN-5** | Réponses sur l'analyse SWOT | Présentent en détail les résultats de la SWOT | 2 |
+| **EN-6** | Commentaires et réflexions sur la SWOT | Formulés de façon autonome sur la base de la SWOT | 2 |
+| **EN-7** | Présenter et analyser des exemples concrets (au moins trois compétences modulaires) | Un exemple tiré du dossier **et** un autre tiré de l'entreprise ; analysés et questionnés de façon critique. Remarque : pas de simples connaissances techniques demandées ; questions liées à l'expérience, pensée systémique ; les compétences non décrites dans le dossier peuvent être examinées | 4 |
+| **EN-8** | Observation critique du rôle personnel et des connaissances acquises | Se projette dans le contexte, définit son rôle, formule connaissances et répercussions | 2 |
+| **EN-9** | Transposition à d'autres situations / entreprises | Esquisse des solutions applicables à une autre entreprise | 2 |
+
+Barème 0 / moitié / max (critère à 4 pts : 0 / 2 / 4). **Réussi : 12 à 20 points** (A3 3.2, p. 5).
+
+## 8. Divergences de formulation repérées entre sources
 
 | Point | A1 | DIR / PRO | Traitement |
 |---|---|---|---|

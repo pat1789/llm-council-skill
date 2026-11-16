@@ -205,6 +205,8 @@ Avant le Chairman, l'orchestrateur (pas un sous-agent) contrôle **chaque** cons
 - le critère cité existe-t-il dans le référentiel ? → sinon le reclasser en
   « Recommandation du Council ».
 
+Outil : `python3 -I scripts/verif_citations.py <texte-pagine.md> <analyses…>` (contrôle manuel
+obligatoire des cas « introuvable » : césures, appels de note, tableaux).
 Les constats `introuvable` sont écartés (et listés comme tels dans le transcript).
 Résultat : `06_constats-verifies.md`.
 
@@ -280,6 +282,9 @@ Dans le dossier de session :
 | `transcript.md` | Transcript complet : contexte, inventaire, empreintes, contrôle formel, 5 analyses, correspondance d'anonymisation, 5 relectures, vérification des preuves (y compris constats écartés), synthèse Chairman, modifications, soutenance. |
 | `modifications.md` | Copie de `08_modifications.md` — la liste de travail du candidat. |
 | `suivi-corrections.csv` | Instantané du tableau de suivi à la date de la session. |
+
+Outil : `python3 -I scripts/build_report.py <dossier_session> templates/rapport-template.html`
+(produit `rapport.html` et `transcript.md`).
 
 **Tableau de suivi maître** `brevet-council/suivi-corrections.csv`
 (format : `templates/suivi-corrections.csv`, séparateur `;`, UTF-8 avec BOM pour Excel) :
